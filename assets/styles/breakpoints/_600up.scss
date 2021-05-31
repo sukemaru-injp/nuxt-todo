@@ -1,0 +1,32 @@
+.header {
+  height: 100px;
+}
+
+.title {
+  letter-spacing: 2px;
+}
+
+.header {
+  padding-top: 30px;
+}
+
+.sec {
+  padding-top: 20px;
+}
+
+.hero {
+  width: 100vw;
+  &__title {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: $cWhite;
+    font-size: 20px;
+    letter-spacing: 2px;
+  }
+}
+
+.btn {
+  width: 300px;
+}

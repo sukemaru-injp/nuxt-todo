@@ -1,0 +1,53 @@
+.header {
+  background-color: aquamarine;
+  height: 60px;
+}
+
+.title {
+  padding: 10px;
+}
+
+.header {
+  padding-top: 10px;
+}
+
+.sec {
+  text-align: center;
+}
+
+.hero {
+  &__title {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: $cWhite;
+    font-size: 16px;
+    letter-spacing: 1px;
+    z-index: 10;
+  }
+}
+
+.content {
+  text-align: center;
+  padding: 30px;
+}
+
+.btn {
+  width: 200px;
+  display: inline-block;
+  border: 2px solid black;
+  padding: 10px 40px;
+  color: black;
+  border-radius: 5px;
+  font-weight: 600;
+  margin-top: 20px;
+
+  &.float:hover {
+    transition: all 0.5s;
+    background-color: aquamarine;
+    color: black;
+    text-decoration: none;
+    box-shadow: 5px 5px 10px 0 rgba(0, 0, 0, 0.3);
+  }
+}
