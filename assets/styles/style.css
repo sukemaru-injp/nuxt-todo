@@ -53,6 +53,12 @@
           box-shadow: 5px 5px 10px 0 rgba(0, 0, 0, 0.3);
 }
 
+.input {
+  width: 60vw;
+  height: 40px;
+  margin: 10px;
+}
+
 @media (min-width: 600px) {
   .header {
     height: 100px;
