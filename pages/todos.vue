@@ -4,7 +4,8 @@
       <ul class="todos__lists">
         <li v-for="todo in todos" :key="todo.id" class="list">
           行き先:{{ todo.name }}<br>
-          やりたいこと:{{ todo.place }}<br>
+          やりたいこと:<span v-bind:class="{ done: todo.done }"> {{ todo.place }}</span><br>
+          投稿時刻:{{ todo.created.toDate() | dateFilter }}
           <button @click="remove(todo.id)">DEL</button>
           <input type="checkbox" v-bind:checked="todo.done" @change="toggle(todo)">
         </li>
@@ -13,7 +14,7 @@
     <div class="form">
       <form v-on:submit.prevent="add">
         <input v-model="name" class="input" placeholder="行き先">
-        <input v-model="place" class="input" placeholder="行き先でのプラン">
+        <input v-model="place" class="input" placeholder=" やりたいこと">
         <button class="submit">Add</button>
       </form>
     </div>
@@ -21,6 +22,8 @@
 </template>
 
 <script>
+import moment from 'moment'
+
 export default {
   data: function() {
     return {
@@ -49,6 +52,18 @@ export default {
     todos() {
       return this.$store.state.todos.todos
     }
-  }
+  },
+  filters: {
+      dateFilter: function(date) {
+        return moment(date).format('YYYY/MM/DD HH:mm')
+      }
+    }
 }
+
 </script>
+
+<style scoped>
+li > span.done {
+  text-decoration: line-through;
+}
+</style>
