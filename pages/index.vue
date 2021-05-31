@@ -21,7 +21,7 @@
       </div>
       <hr>
       <div class="content">
-        <router-link to="/todos" class="btn float">ToDoリストを作る</router-link>
+        <router-link to="/todos" class="btn float">旅程を作る</router-link>
         <router-link to="/todos" class="btn float">ログイン</router-link>
       </div>
     </section>
