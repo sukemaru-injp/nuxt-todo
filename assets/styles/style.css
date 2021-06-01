@@ -70,11 +70,12 @@
 
 .input {
   width: 70vw;
-  height: 30px;
+  height: 40px;
   margin: 10px auto;
   border: 1px solid black;
   border-radius: 5px;
   display: block;
+  padding: 5px;
 }
 
 .submit {

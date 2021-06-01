@@ -3,11 +3,17 @@
     <div class="todos">
       <ul class="todos__lists">
         <li v-for="todo in todos" :key="todo.id" class="list">
-          行き先:{{ todo.name }}<br>
-          やりたいこと:<span v-bind:class="{ done: todo.done }"> {{ todo.place }}</span><br>
-          投稿時刻:{{ todo.created.toDate() | dateFilter }}
-          <button @click="remove(todo.id)">DEL</button>
-          <input type="checkbox" v-bind:checked="todo.done" @change="toggle(todo)">
+          <div v-if='todo.created' class="flex">
+            <div class="flex__left">
+              行き先:{{ todo.name }}<br>
+              やりたいこと:<span v-bind:class="{ done: todo.done }"> {{ todo.place }}</span><br>
+              投稿日時:{{ todo.created.toDate() | dateFilter }}
+            </div>
+            <div class="flex__right">
+              <button @click="remove(todo.id)">DEL</button>
+              <input type="checkbox" v-bind:checked="todo.done" @change="toggle(todo)">
+            </div>
+          </div>
         </li>
       </ul>
     </div>
@@ -50,7 +56,8 @@ export default {
   },
   computed: {
     todos() {
-      return this.$store.state.todos.todos
+      // return this.$store.state.todos.todos
+      return this.$store.getters['todos/orderdTodos']
     }
   },
   filters: {
@@ -63,7 +70,12 @@ export default {
 </script>
 
 <style scoped>
-li > span.done {
+li > div >  div > span.done {
   text-decoration: line-through;
+}
+
+.flex {
+  display: flex;
+  justify-content: space-between;
 }
 </style>
