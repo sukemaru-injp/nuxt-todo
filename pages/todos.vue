@@ -10,10 +10,11 @@
               投稿日時:{{ todo.created.toDate() | dateFilter }}
             </div>
             <div class="flex__right">
-              <button @click="remove(todo.id)">DEL</button>
               <input type="checkbox" v-bind:checked="todo.done" @change="toggle(todo)">
+              <button @click="remove(todo.id)" class="delete">削除</button>
             </div>
           </div>
+          <hr>
         </li>
       </ul>
     </div>
@@ -77,5 +78,9 @@ li > div >  div > span.done {
 .flex {
   display: flex;
   justify-content: space-between;
+}
+
+hr {
+  margin-right: 10px;
 }
 </style>

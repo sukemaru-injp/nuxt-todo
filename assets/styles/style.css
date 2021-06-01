@@ -64,7 +64,7 @@
 }
 
 .list {
-  margin-top: 10px;
+  margin-top: 20px;
   font-size: 18px;
 }
 
@@ -84,6 +84,12 @@
   width: 40vw;
   border-radius: 5px;
   margin-left: 10px;
+}
+
+.delete {
+  margin-right: 5px;
+  padding: 5px;
+  border-radius: 5px;
 }
 
 @media (min-width: 600px) {
@@ -124,6 +130,11 @@
     margin-top: 20px;
     width: 200px;
     height: 50px;
+  }
+  .delete {
+    margin-right: 20px;
+    padding: 5px;
+    border-radius: 5px;
   }
 }
 
