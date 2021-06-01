@@ -81,15 +81,52 @@
 .submit {
   border: 2px solid black;
   background-color: aquamarine;
-  width: 40vw;
+  width: 30vw;
+  height: 40px;
   border-radius: 5px;
   margin-left: 10px;
 }
 
-.delete {
-  margin-right: 5px;
-  padding: 5px;
+.toggle-btn {
+  height: 30px;
+  width: 90px;
   border-radius: 5px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  font-size: 14px;
+  border: 1px solid black;
+}
+
+.red {
+  background-color: salmon;
+}
+
+.delete {
+  background-color: black;
+  color: white;
+}
+
+.flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.flex__right {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column;
+          flex-flow: column;
+}
+
+hr {
+  margin-right: 10px;
 }
 
 @media (min-width: 600px) {
@@ -131,10 +168,14 @@
     width: 200px;
     height: 50px;
   }
-  .delete {
-    margin-right: 20px;
-    padding: 5px;
+  .toggle-btn {
+    height: 40px;
+    width: 120px;
     border-radius: 5px;
+    margin-right: 50px;
+    margin-bottom: 10px;
+    font-size: 14px;
+    border: 1px solid black;
   }
 }
 

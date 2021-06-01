@@ -10,8 +10,11 @@
               投稿日時:{{ todo.created.toDate() | dateFilter }}
             </div>
             <div class="flex__right">
-              <input type="checkbox" v-bind:checked="todo.done" @change="toggle(todo)">
-              <button @click="remove(todo.id)" class="delete">削除</button>
+              <button @click="toggle(todo)" v-if="done === false" class='toggle-btn red'>
+                <div v-if="todo.done === false">これから！</div>
+                <div v-if="todo.done === true">済んだ！</div>
+              </button>
+              <button @click="remove(todo.id)" class="toggle-btn delete">削除</button>
             </div>
           </div>
           <hr>
@@ -22,7 +25,7 @@
       <form v-on:submit.prevent="add">
         <input v-model="name" class="input" placeholder="行き先">
         <input v-model="place" class="input" placeholder=" やりたいこと">
-        <button class="submit">Add</button>
+        <button class="submit">追加する</button>
       </form>
     </div>
   </div>
@@ -57,7 +60,6 @@ export default {
   },
   computed: {
     todos() {
-      // return this.$store.state.todos.todos
       return this.$store.getters['todos/orderdTodos']
     }
   },
@@ -73,14 +75,5 @@ export default {
 <style scoped>
 li > div >  div > span.done {
   text-decoration: line-through;
-}
-
-.flex {
-  display: flex;
-  justify-content: space-between;
-}
-
-hr {
-  margin-right: 10px;
 }
 </style>

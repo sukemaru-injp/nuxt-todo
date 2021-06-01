@@ -82,14 +82,44 @@
 .submit {
   border: 2px solid black;
   background-color: aquamarine;
-  width: 40vw;
+  width: 30vw;
+  height: 40px;
   border-radius: 5px;
   margin-left: 10px;
 }
 
-.delete {
-  margin-right: 5px;
-  padding: 5px;
+.toggle-btn {
+  height: 30px;
+  width: 90px;
   border-radius: 5px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  font-size: 14px;
+  border: 1px solid black;
+}
+
+.red {
+  background-color: salmon;
+}
+
+.delete {
+  background-color: black;
+  color: $cWhite;
+}
+
+.flex {
+  display: flex;
+  justify-content: space-between;
+
+  &__right {
+    display: flex;
+    flex-flow: column;
+  }
+}
+
+
+
+hr {
+  margin-right: 10px;
 }
 

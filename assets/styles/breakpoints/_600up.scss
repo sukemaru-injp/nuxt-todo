@@ -43,8 +43,12 @@
   height: 50px;
 }
 
-.delete {
-  margin-right: 20px;
-  padding: 5px;
+.toggle-btn {
+  height: 40px;
+  width: 120px;
   border-radius: 5px;
+  margin-right: 50px;
+  margin-bottom: 10px;
+  font-size: 14px;
+  border: 1px solid black;
 }
