@@ -1,6 +1,5 @@
 <template>
   <div id="container">
-    <section class="sec">
       <div class="hero">
         <client-only>
           <swiper :options="swiperOption">
@@ -22,9 +21,8 @@
       <hr>
       <div class="content">
         <router-link to="/todos" class="btn float">旅程を作る</router-link>
-        <router-link to="/todos" class="btn float">ログイン</router-link>
+        <router-link to="/todos" class="btn float">メモを作る</router-link>
       </div>
-    </section>
   </div>
 </template>
 
