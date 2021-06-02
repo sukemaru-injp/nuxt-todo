@@ -47,7 +47,7 @@ export default {
   },
   methods: {
     add() {
-      this.$store.dispatch('todos/add', {name:this.name, place: this.place})
+      this.$store.dispatch('todos/add', {name: this.name, place: this.place})
       this.name = ''
       this.place = ''
     },
