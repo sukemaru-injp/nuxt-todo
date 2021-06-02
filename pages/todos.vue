@@ -53,6 +53,7 @@ export default {
     },
     remove(id) {
       this.$store.dispatch('todos/remove', id)
+      alert('削除します')
     },
     toggle(todo) {
       this.$store.dispatch('todos/toggle', todo)
