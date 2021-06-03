@@ -10,7 +10,7 @@
               投稿日時:{{ todo.created.toDate() | dateFilter }}
             </div>
             <div class="flex__right">
-              <button @click="toggle(todo)" v-if="done === false" class='toggle-btn red'>
+              <button @click="toggle(todo)" class='toggle-btn red'>
                 <div v-if="todo.done === false">これから！</div>
                 <div v-if="todo.done === true">済んだ！</div>
               </button>
