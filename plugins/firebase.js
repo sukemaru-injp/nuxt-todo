@@ -1,11 +1,11 @@
-import firebase from 'firebase';
+import firebase from "firebase"
 
 // 初期化に必要なデータ
 const config = {
-  projectId: process.env.FIREBASE_PROJECT_ID
+  projectId: process.env.FIREBASE_PROJECT_ID,
 }
 
-if(!firebase.apps.length) {
+if (!firebase.apps.length) {
   firebase.initializeApp(config)
 }
 

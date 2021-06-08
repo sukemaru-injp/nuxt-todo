@@ -1,24 +1,24 @@
-import firebase from '~/plugins/firebase'
-import { firestoreAction } from 'vuexfire'
+import firebase from "~/plugins/firebase"
+import { firestoreAction } from "vuexfire"
 
 const db = firebase.firestore()
-const todosRef = db.collection('todos')
+const todosRef = db.collection("todos")
 
 export const state = () => ({
-  todos: []
+  todos: [],
 })
 
 export const actions = {
   init: firestoreAction(({ bindFirestoreRef }) => {
-    bindFirestoreRef('todos', todosRef)
+    bindFirestoreRef("todos", todosRef)
   }),
-  add: firestoreAction((context, {name, place}) => {
-    if(name.trim()) {
+  add: firestoreAction((context, { name, place }) => {
+    if (name.trim()) {
       todosRef.add({
         name: name,
         place: place,
         done: false,
-        created: firebase.firestore.FieldValue.serverTimestamp()
+        created: firebase.firestore.FieldValue.serverTimestamp(),
       })
     }
   }),
@@ -27,13 +27,13 @@ export const actions = {
   }),
   toggle: firestoreAction((context, todo) => {
     todosRef.doc(todo.id).update({
-      done: !todo.done
+      done: !todo.done,
     })
-  })
+  }),
 }
 
 export const getters = {
-  orderdTodos: state => {
-    return _.orderBy(state.todos, 'created', 'desc');
-  }
+  orderdTodos: (state) => {
+    return _.orderBy(state.todos, "created", "desc")
+  },
 }
