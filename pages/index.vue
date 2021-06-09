@@ -22,6 +22,7 @@
     <div class="content">
       <router-link to="/todos" class="btn float">旅程を作る</router-link>
       <router-link to="/todos" class="btn float">メモを作る</router-link>
+      <p class="want">やりたいことをやろう</p>
     </div>
   </div>
 </template>
@@ -52,4 +53,12 @@ export default {
 }
 </script>
 
-<style></style>
+<style lang="scss" scoped>
+.want {
+  color: red;
+
+  &:hover {
+    color: blue;
+  }
+}
+</style>
