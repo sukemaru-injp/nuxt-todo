@@ -2,12 +2,12 @@
   <div id="container">
     <Swiper></Swiper>
     <hr />
-    <div class="content">
+    <div class="main-content">
       <router-link to="/todos" class="btn float">旅程を作る</router-link>
       <router-link to="/todos" class="btn float">メモを作る</router-link>
       <p class="want">やりたいことをやろう</p>
     </div>
-    <div class="content">
+    <div class="main-content">
       <ButtonComponent></ButtonComponent>
     </div>
   </div>

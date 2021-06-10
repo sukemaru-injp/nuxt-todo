@@ -12,7 +12,7 @@ export default {
     }
   },
   methods: {
-    add: function () {
+    add: () => {
       this.num += 1
     },
   },
