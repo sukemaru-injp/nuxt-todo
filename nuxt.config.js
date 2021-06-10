@@ -1,6 +1,6 @@
-const webpack = require("webpack");
-import Sass from 'sass'
-import Fiber from 'fibers'
+const webpack = require("webpack")
+import Sass from "sass"
+import Fiber from "fibers"
 
 export default {
   // Disable server-side rendering: https://go.nuxtjs.dev/ssr-mode
@@ -39,10 +39,7 @@ export default {
   buildModules: [],
 
   // Modules: https://go.nuxtjs.dev/config-modules
-  modules: [
-    "@nuxtjs/dotenv",
-    '@nuxtjs/style-resources'
-  ],
+  modules: ["@nuxtjs/dotenv", "@nuxtjs/style-resources"],
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
@@ -50,6 +47,6 @@ export default {
       new webpack.ProvidePlugin({
         _: "lodash",
       }),
-    ]
+    ],
   },
 }
