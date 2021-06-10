@@ -24,10 +24,15 @@
       <router-link to="/todos" class="btn float">メモを作る</router-link>
       <p class="want">やりたいことをやろう</p>
     </div>
+    <div class="content">
+      <ButtonComponent></ButtonComponent>
+    </div>
   </div>
 </template>
 
 <script>
+import ButtonComponent from '~/components/Button.vue'
+
 export default {
   data() {
     return {
@@ -50,6 +55,9 @@ export default {
       },
     }
   },
+  components: {
+    ButtonComponent
+  }
 }
 </script>
 
