@@ -1,6 +1,6 @@
 <template>
   <div class="like">
-    <button>いいね {{ num }}</button>
+    <button @click="add">いいね {{ num }}</button>
   </div>
 </template>
 
@@ -9,6 +9,11 @@ export default {
   data() {
     return {
       num: 5,
+    }
+  },
+  methods: {
+    add: function() {
+      this.num += 1
     }
   }
 }
