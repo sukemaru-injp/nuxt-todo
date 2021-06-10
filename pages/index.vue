@@ -10,17 +10,22 @@
     <div class="main-content">
       <ButtonComponent></ButtonComponent>
     </div>
+    <div class="main-content">
+      <FindTravel></FindTravel>
+    </div>
   </div>
 </template>
 
 <script>
 import ButtonComponent from "~/components/Button.vue"
 import Swiper from "~/components/Swiper.vue"
+import FindTravel from "~/components/FindTravel.vue"
 
 export default {
   components: {
     ButtonComponent,
     Swiper,
+    FindTravel,
   },
 }
 </script>
