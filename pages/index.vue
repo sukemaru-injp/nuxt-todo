@@ -14,14 +14,14 @@
 </template>
 
 <script>
-import ButtonComponent from '~/components/Button.vue'
-import Swiper from '~/components/Swiper.vue'
+import ButtonComponent from "~/components/Button.vue"
+import Swiper from "~/components/Swiper.vue"
 
 export default {
   components: {
     ButtonComponent,
-    Swiper
-  }
+    Swiper,
+  },
 }
 </script>
 

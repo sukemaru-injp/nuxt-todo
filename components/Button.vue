@@ -12,13 +12,11 @@ export default {
     }
   },
   methods: {
-    add: function() {
+    add: function () {
       this.num += 1
-    }
-  }
+    },
+  },
 }
 </script>
 
-<style lang="scss" scoped>
-
-</style>
+<style lang="scss" scoped></style>

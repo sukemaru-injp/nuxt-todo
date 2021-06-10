@@ -1,27 +1,27 @@
 <template>
   <div class="hero">
-      <client-only>
-        <swiper :options="swiperOption">
-          <swiper-slide>
-            <img src="~/assets/images/IMG_4243.png" class="swiper-slide" />
-            <div class="hero__title">Travel ToDo</div>
-          </swiper-slide>
-          <swiper-slide>
-            <img src="~/assets/images/IMG_4090.png" class="swiper-slide" />
-            <div class="hero__title">あなただけの旅行計画</div>
-          </swiper-slide>
-          <swiper-slide>
-            <img src="~/assets/images/IMG_0735.png" class="swiper-slide" />
-            <div class="hero__title">Enjoy Holiday</div>
-          </swiper-slide>
-        </swiper>
-      </client-only>
-    </div>
+    <client-only>
+      <swiper :options="swiperOption">
+        <swiper-slide>
+          <img src="~/assets/images/IMG_4243.png" class="swiper-slide" />
+          <div class="hero__title">Travel ToDo</div>
+        </swiper-slide>
+        <swiper-slide>
+          <img src="~/assets/images/IMG_4090.png" class="swiper-slide" />
+          <div class="hero__title">あなただけの旅行計画</div>
+        </swiper-slide>
+        <swiper-slide>
+          <img src="~/assets/images/IMG_0735.png" class="swiper-slide" />
+          <div class="hero__title">Enjoy Holiday</div>
+        </swiper-slide>
+      </swiper>
+    </client-only>
+  </div>
 </template>
 
 <script>
 export default {
-    data() {
+  data() {
     return {
       swiperOption: {
         autoplay: {
@@ -41,6 +41,6 @@ export default {
         },
       },
     }
-  }
+  },
 }
 </script>
