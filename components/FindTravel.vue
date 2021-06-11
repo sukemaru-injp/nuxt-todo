@@ -4,10 +4,18 @@
     <p class="content__sub-title">お気に入りの旅先を探そう</p>
     <div class="content__inner">
       <div class="content__item">
-        <div class="cover-slide inview">
+        <div class="cover-slide inview darken">
           <img src="~/assets/images/IMG_0362.png" class="img-zoom">
         </div>
         <p class="item-title">香港</p>
+      </div>
+    </div>
+    <div class="content__inner">
+      <div class="content__item">
+        <div class="cover-slide inview darken">
+          <img src="~/assets/images/IMG_2496.png" class="img-zoom">
+        </div>
+        <p class="item-title">ロンドン</p>
       </div>
     </div>
   </div>
@@ -73,12 +81,17 @@
 
   .inview & {
     opacity: 1;
+    transition: transform 0.4s ease;
     @include animation(
       $name: kf-img-show,
       $duration: 1.5s,
       $timing-function: ease-in-out,
       $fill-mode: none,
       );
+
+    &:hover {
+      transform: scale(1.1);
+    }
   }
 }
 
@@ -96,6 +109,24 @@
   }
   100% {
     opacity: 1;
+  }
+}
+
+.darken {
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 5;
+    transition: background-color 0.3s ease;
+    pointer-events: none;
+  }
+
+  &:hover::before {
+    background-color: rgba(0, 0, 0, 0.3);
   }
 }
 
