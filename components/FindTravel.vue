@@ -4,7 +4,7 @@
     <p class="content__sub-title">お気に入りの旅先を探そう</p>
     <div class="content__inner">
       <div class="content__item">
-        <div class="img cover-slide">
+        <div class="cover-slide">
           <img src="~/assets/images/IMG_0362.png">
         </div>
         <p class="item-title">香港</p>
@@ -16,13 +16,10 @@
 <script></script>
 
 <style lang="scss" scoped>
+
 .content {
   background-color: beige;
   margin: 20px;
-
-  &__item {
-
-  }
 
 }
 
