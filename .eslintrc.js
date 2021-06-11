@@ -23,5 +23,7 @@ module.exports = {
     "no-console": "off",
     "vue/max-attributes-per-line": "off",
     "prettier/prettier": ["error", { semi: false }],
+    // 未定義の変数
+    "no-undef": "off",
   },
 }

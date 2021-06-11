@@ -5,7 +5,7 @@
     <div class="content__inner">
       <div class="content__item">
         <div class="cover-slide inview darken">
-          <img src="~/assets/images/IMG_0362.png" class="img-zoom">
+          <img src="~/assets/images/IMG_0362.png" class="img-zoom" />
         </div>
         <p class="item-title">香港</p>
       </div>
@@ -13,7 +13,7 @@
     <div class="content__inner">
       <div class="content__item">
         <div class="cover-slide inview darken">
-          <img src="~/assets/images/IMG_2496.png" class="img-zoom">
+          <img src="~/assets/images/IMG_2496.png" class="img-zoom" />
         </div>
         <p class="item-title">ロンドン</p>
       </div>
@@ -25,30 +25,26 @@
 // import 'intersection-observer';
 export default {
   mounted() {
-    const slide = document.querySelector('.cover-slide');
+    const slides = document.querySelectorAll(".cover-slide")
     const cb = (entries, observer) => {
-      entries.forEach(entry => {
-        if(entry.isIntersecting) {
-          console.log('ok');
-          entry.target.classList.add('inview');
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("inview")
           // observer.unobserve(entry.target);
         } else {
-          console.log('out');
-          entry.target.classList.remove('inview');
+          entry.target.classList.remove("inview")
         }
-      });
+      })
     }
-
     const options = {
       root: null,
-      rootMargin: '100px',
-      thredshold: 0
+      rootMargin: "100px",
+      thredshold: 0,
     }
-    const io = new IntersectionObserver(cb, options);
-    io.observe(slide);
-  }
+    const io = new IntersectionObserver(cb, options)
+    slides.forEach((slide) => io.observe(slide))
+  },
 }
-
 </script>
 
 <style lang="scss" scoped>
@@ -82,8 +78,8 @@ export default {
       @include animation(
         $name: kf-cover-slide,
         $duration: 1.5s,
-        $timing-function: ease-in-out,
-        );
+        $timing-function: ease-in-out
+      );
     }
   }
 }
@@ -120,8 +116,8 @@ export default {
       $name: kf-img-show,
       $duration: 1.5s,
       $timing-function: ease-in-out,
-      $fill-mode: none,
-      );
+      $fill-mode: none
+    );
 
     &:hover {
       transform: scale(1.1);
