@@ -21,7 +21,9 @@ module.exports = {
     semi: [2, "never"],
     // consoleオブジェクトのメソッドの記述を許可しないoff
     "no-console": "off",
+    // 1行あたり属性値の最大数を制限する
     "vue/max-attributes-per-line": "off",
+    // 式の最後にセミコロン
     "prettier/prettier": ["error", { semi: false }],
     // 未定義の変数
     "no-undef": "off",
