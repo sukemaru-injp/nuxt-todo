@@ -21,7 +21,35 @@
   </div>
 </template>
 
-<script></script>
+<script>
+// import 'intersection-observer';
+export default {
+  mounted() {
+    const slide = document.querySelector('.cover-slide');
+    const cb = (entries, observer) => {
+      entries.forEach(entry => {
+        if(entry.isIntersecting) {
+          console.log('ok');
+          entry.target.classList.add('inview');
+          // observer.unobserve(entry.target);
+        } else {
+          console.log('out');
+          entry.target.classList.remove('inview');
+        }
+      });
+    }
+
+    const options = {
+      root: null,
+      rootMargin: '100px',
+      thredshold: 0
+    }
+    const io = new IntersectionObserver(cb, options);
+    io.observe(slide);
+  }
+}
+
+</script>
 
 <style lang="scss" scoped>
 @import "~/assets/styles/_mixin.scss";
@@ -43,13 +71,14 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: burlywood;
-    opacity: 0.6;
+    background-color: aquamarine;
+    opacity: 0;
     z-index: 10;
   }
 
   &.inview {
     &::after {
+      opacity: 1;
       @include animation(
         $name: kf-cover-slide,
         $duration: 1.5s,
@@ -61,18 +90,23 @@
 
 @keyframes kf-cover-slide {
   0% {
-    left: 0;
-    right: 100%;
+    transform-origin: left;
+    transform: scaleX(0);
   }
 
   50% {
-    left: 0;
-    right: 0;
+    transform-origin: left;
+    transform: scaleX(1);
+  }
+
+  51% {
+    transform-origin: right;
+    transform: scaleX(1);
   }
 
   100% {
-    left: 100%;
-    right: 0;
+    transform-origin: right;
+    transform: scaleX(0);
   }
 }
 
