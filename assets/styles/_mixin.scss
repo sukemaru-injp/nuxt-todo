@@ -3,6 +3,7 @@
   $duration: 1s,
   $timing-function: ease,
   $delay: 0s,
+  $iteration-count: 1,
   $direction: normal,
   $fill-mode: forwards
 ) {
@@ -11,7 +12,7 @@
     duration: $duration;
     timing-function: $timing-function;
     delay: $delay;
-    iteration-count: $itaration-count;
+    iteration-count: $iteration-count;
     direction: $direction;
     fill-mode: $fill-mode;
   }
