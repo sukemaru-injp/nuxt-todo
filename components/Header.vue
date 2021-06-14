@@ -17,7 +17,7 @@
 export default {
   methods: {
     toggle() {
-      document.querySelector("body").classList.toggle("menu-open")
+      document.querySelector("#global-container").classList.toggle("menu-open")
     },
   },
 }

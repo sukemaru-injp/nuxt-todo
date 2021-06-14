@@ -25,6 +25,13 @@ export default {
   components: {
     Header,
   },
+  methods: {
+    constructor() {
+      this.DOM = {}
+      this.DOM.btn = document.querySelector(".menu-open")
+      this.DOM.container = document.querySelector("#global-container")
+    },
+  },
 }
 </script>
 

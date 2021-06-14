@@ -26,7 +26,7 @@
 export default {
   mounted() {
     const slides = document.querySelectorAll(".cover-slide")
-    const cb = (entries, observer) => {
+    const cb = (entries) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
           entry.target.classList.add("inview")
