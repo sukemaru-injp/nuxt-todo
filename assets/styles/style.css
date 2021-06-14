@@ -1,14 +1,11 @@
 .header {
   background-color: aquamarine;
   height: 60px;
+  padding-top: 10px;
 }
 
 .title {
   padding: 10px;
-}
-
-.header {
-  padding-top: 10px;
 }
 
 .sec {
