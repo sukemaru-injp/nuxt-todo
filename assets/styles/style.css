@@ -1,17 +1,3 @@
-.header {
-  background-color: aquamarine;
-  height: 60px;
-  padding-top: 10px;
-}
-
-.title {
-  padding: 10px;
-}
-
-.sec {
-  text-align: center;
-}
-
 .hero__title {
   position: absolute;
   top: 50%;
