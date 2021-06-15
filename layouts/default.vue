@@ -64,6 +64,7 @@ export default {
 }
 
 .menu-open {
+  transition: all 1s;
   & .mobile {
     display: block;
     background-color: teal;

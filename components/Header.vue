@@ -47,10 +47,10 @@ export default {
   & > span {
     display: block;
     background-color: black;
-    width: 35px;
+    width: 30px;
     height: 2px;
     margin-bottom: 10px;
-    transition: all 0.5s;
+    transition: all 0.6s;
 
     &:last-child {
       margin-bottom: 0;
@@ -69,6 +69,7 @@ export default {
     right: 0;
     z-index: 100;
     & > span {
+      background-color: white;
       &:nth-child(1) {
         transform: translateY(12px) rotate(135deg);
       }
