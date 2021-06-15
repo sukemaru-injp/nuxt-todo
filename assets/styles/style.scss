@@ -15,6 +15,11 @@ img {
   vertical-align: bottom;
 }
 
+#global-container {
+  position: relative;
+  z-index: 20;
+}
+
 .title {
   font-size: 30px;
   color: black;

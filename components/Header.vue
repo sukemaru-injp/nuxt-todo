@@ -30,6 +30,7 @@ export default {
   padding-top: 10px;
   display: flex;
   justify-content: space-between;
+  position: relative;
 }
 
 .title {
@@ -63,6 +64,10 @@ export default {
 
 .menu-open {
   & .menu-icon {
+    position: fixed;
+    top: 10px;
+    right: 0;
+    z-index: 100;
     & > span {
       &:nth-child(1) {
         transform: translateY(12px) rotate(135deg);
