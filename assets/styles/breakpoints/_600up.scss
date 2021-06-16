@@ -1,26 +1,10 @@
-.header {
-  height: 100px;
-}
-
 .title {
-  letter-spacing: 2px;
+  letter-spacing: 3px;
 }
 
 .header {
+  height: 200px;
   padding-top: 30px;
-}
-
-.hero {
-  width: 100vw;
-  &__title {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: white;
-    font-size: 20px;
-    letter-spacing: 2px;
-  }
 }
 
 .btn {
@@ -47,4 +31,25 @@
   margin-bottom: 10px;
   font-size: 14px;
   border: 1px solid black;
+}
+
+// ユーティリティクラス
+.font-sm {
+  font-size: 15px;
+}
+
+.font-md {
+  font-size: 18px;
+}
+
+.font-lg {
+  font-size: 21px;
+}
+
+.mb-lg {
+  margin-bottom: 90px !important;
+}
+
+.pb-lg {
+  padding-bottom: 90px !important; 
 }

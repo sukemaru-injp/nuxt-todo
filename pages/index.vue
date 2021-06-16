@@ -39,6 +39,11 @@ export default {
   }
 }
 
+.main-content {
+  text-align: center;
+  padding: 10px;
+}
+
 .btn {
   width: 200px;
   display: inline-block;

@@ -1,5 +1,5 @@
 <template>
-  <div id="container">
+  <div id="container" class="content-width">
     <div class="todos">
       <ul class="todos__lists">
         <li v-for="todo in todos" :key="todo.id" class="list">
@@ -25,7 +25,7 @@
         </li>
       </ul>
     </div>
-    <div class="form">
+    <div class="form mb-lg">
       <form @submit.prevent="add">
         <input v-model="name" class="input" placeholder="行き先" />
         <input v-model="place" class="input" placeholder=" やりたいこと" />

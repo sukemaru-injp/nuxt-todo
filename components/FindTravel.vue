@@ -1,5 +1,5 @@
 <template>
-  <div class="content">
+  <div class="content content-width">
     <h2 class="content__title">Find Travel</h2>
     <p class="content__sub-title">お気に入りの旅先を探そう</p>
     <div class="content__inner">
@@ -22,7 +22,6 @@
 </template>
 
 <script>
-// import 'intersection-observer';
 export default {
   mounted() {
     const slides = document.querySelectorAll(".cover-slide")
@@ -51,7 +50,6 @@ export default {
 
 .content {
   background-color: beige;
-  margin: 20px;
   padding: 10px;
 }
 
