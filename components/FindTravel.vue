@@ -47,7 +47,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import "~/assets/styles/_mixin.scss";
+@import "~/assets/styles/vendors/_mixin.scss";
 
 .content {
   background-color: beige;
