@@ -34,7 +34,14 @@ export default {
 }
 
 .title {
+  font-size: 30px;
   padding: 10px;
+  color: black;
+
+  &:hover {
+    text-decoration: none;
+    color: black;
+  }
 }
 
 .menu-icon {
