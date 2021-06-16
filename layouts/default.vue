@@ -8,7 +8,9 @@
           <a href="#" class="mobile__link">新規登録</a>
         </li>
         <li class="mobile__item">
-          <a href="#" class="mobile__link">ログイン</a>
+          <router-link to="/users/login" class="mobile__link">
+            ログイン
+          </router-link>
         </li>
         <li class="mobile__item">
           <a href="#" class="mobile__link">Our Service</a>
