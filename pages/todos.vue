@@ -12,7 +12,7 @@
               投稿日時:{{ todo.created.toDate() | dateFilter }}
             </div>
             <div class="flex__right">
-              <button class="toggle-btn red" @click="toggle(todo)">
+              <button class="toggle-btn" @click="toggle(todo)">
                 <div v-if="todo.done === false">これから！</div>
                 <div v-if="todo.done === true">済んだ！</div>
               </button>
@@ -76,8 +76,60 @@ export default {
 }
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
 li > div > div > span.done {
   text-decoration: line-through;
+}
+
+.form {
+  text-align: center;
+  margin: 0 auto;
+  margin-top: 20px;
+}
+
+.todos {
+  &__lists {
+    list-style: none;
+  }
+}
+
+.list {
+  margin-top: 20px;
+  font-size: 18px;
+}
+
+.input {
+  width: 70vw;
+  height: 40px;
+  margin: 10px auto;
+  border: 1px solid black;
+  border-radius: 5px;
+  display: block;
+  padding: 5px;
+}
+
+.submit {
+  border: 2px solid black;
+  background-color: aquamarine;
+  width: 30vw;
+  height: 40px;
+  border-radius: 5px;
+  margin-left: 10px;
+}
+
+.toggle-btn {
+  height: 30px;
+  width: 90px;
+  border-radius: 5px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  font-size: 14px;
+  background-color: salmon;
+  border: 1px solid black;
+}
+
+.delete {
+  background-color: black;
+  color: white;
 }
 </style>
