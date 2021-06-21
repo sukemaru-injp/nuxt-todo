@@ -13,8 +13,8 @@
             </div>
             <div class="flex__right">
               <button class="toggle-btn" @click="toggle(todo)">
-                <div v-if="todo.done === false">これから！</div>
-                <div v-if="todo.done === true">済んだ！</div>
+                <div v-if="!todo.done">これから！</div>
+                <div v-if="todo.done">済んだ！</div>
               </button>
               <button class="toggle-btn delete" @click="remove(todo.id)">
                 削除
