@@ -1,5 +1,5 @@
 <template>
-  <div class="content content-width">
+  <div class="content">
     <h2 class="content__title">Find Travel</h2>
     <p class="content__sub-title">お気に入りの旅先を探そう</p>
     <div class="content__inner">
@@ -47,11 +47,6 @@ export default {
 
 <style lang="scss" scoped>
 @import "~/assets/styles/vendors/_mixin.scss";
-
-.content {
-  background-color: beige;
-  padding: 10px;
-}
 
 .cover-slide {
   position: relative;

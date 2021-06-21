@@ -21,6 +21,21 @@
           flex-flow: column;
 }
 
+.content {
+  background-color: beige;
+  padding: 10px;
+}
+
+.content__inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
 .font-sm {
   font-size: 15px;
 }
@@ -49,7 +64,7 @@
   padding-bottom: 60px !important;
 }
 
-.content-width {
+.content-width, .content {
   width: 90%;
   margin: 0 auto;
   max-width: 1070px;
@@ -84,6 +99,18 @@
     margin-bottom: 10px;
     font-size: 14px;
     border: 1px solid black;
+  }
+  .content__inner {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .content__item {
+    -ms-flex-preferred-size: 48%;
+        flex-basis: 48%;
   }
   .font-sm {
     font-size: 15px;

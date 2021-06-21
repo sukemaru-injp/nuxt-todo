@@ -12,6 +12,17 @@
   }
 }
 
+.content {
+  @extend .content-width;
+  background-color: beige;
+  padding: 10px;
+
+  &__inner {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
 // ユーティリティクラス
 .font-sm {
   font-size: 15px;

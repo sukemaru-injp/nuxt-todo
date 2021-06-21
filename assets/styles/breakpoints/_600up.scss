@@ -33,6 +33,16 @@
   border: 1px solid black;
 }
 
+.content {
+  &__inner {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  &__item {
+    flex-basis: 48%;
+  }
+}
+
 // ユーティリティクラス
 .font-sm {
   font-size: 15px;
