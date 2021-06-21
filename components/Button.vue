@@ -1,12 +1,15 @@
 <template>
   <div class="transition mb-lg">
     <h1>Transition</h1>
-    <button class="mb-lg" @click="show = !show">切り替えるよ！</button>
-    <transition name="fade">
-      <h2 v-show="show">どこに行こうか？</h2>
+    <button class="mb-lg" @click="show = !show">切り替え</button>
+    <transition
+      name="fade"
+      enter-active-class="animate__animated animate__bounce"
+    >
+      <h2 v-if="show">どこに行こうか？</h2>
     </transition>
     <transition name="slide" appear>
-      <h3 v-if="show">Bye!!</h3>
+      <h3 v-if="show">見てみよう！</h3>
     </transition>
   </div>
 </template>
