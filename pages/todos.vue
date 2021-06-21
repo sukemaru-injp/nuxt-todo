@@ -13,8 +13,10 @@
             </div>
             <div class="flex__right">
               <button class="toggle-btn" @click="toggle(todo)">
-                <div v-if="!todo.done">これから！</div>
-                <div v-if="todo.done">済んだ！</div>
+                <transition name="fade" mode="out-in">
+                  <div v-if="!todo.done" key="not-done">これから！</div>
+                  <div v-if="todo.done" key="done">済んだ！</div>
+                </transition>
               </button>
               <button class="toggle-btn delete" @click="remove(todo.id)">
                 削除
@@ -131,5 +133,24 @@ li > div > div > span.done {
 .delete {
   background-color: black;
   color: white;
+}
+
+.fade-enter {
+  opacity: 0;
+}
+.fade-enter-active {
+  transition: opacity 1s;
+}
+.fade-enter-to {
+  opacity: 1;
+}
+.fade-leave {
+  opacity: 1;
+}
+.fade-leave-active {
+  transition: opacity 1s;
+}
+.fade-leave-to {
+  opacity: 0;
 }
 </style>

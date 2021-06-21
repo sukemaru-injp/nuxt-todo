@@ -1,7 +1,7 @@
 <template>
   <div class="transition mb-lg">
     <h1>Transition</h1>
-    <button class="mb-lg" @click="show = !show">切り替え</button>
+    <button class="mb-lg" @click="show = !show">アニメーション</button>
     <transition
       name="fade"
       enter-active-class="animate__animated animate__bounce"
@@ -18,7 +18,7 @@
 export default {
   data() {
     return {
-      show: true,
+      show: false,
     }
   },
 }
