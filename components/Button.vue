@@ -5,7 +5,7 @@
     <transition name="fade">
       <h2 v-show="show">どこに行こうか？</h2>
     </transition>
-    <transition name="slide">
+    <transition name="slide" appear>
       <h3 v-if="show">Bye!!</h3>
     </transition>
   </div>
