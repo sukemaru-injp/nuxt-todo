@@ -109,8 +109,8 @@
         flex-wrap: wrap;
   }
   .content__item {
-    -ms-flex-preferred-size: 48%;
-        flex-basis: 48%;
+    -ms-flex-preferred-size: 50%;
+        flex-basis: 50%;
   }
   .font-sm {
     font-size: 15px;

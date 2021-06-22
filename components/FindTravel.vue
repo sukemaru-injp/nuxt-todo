@@ -9,8 +9,6 @@
         </div>
         <p class="item-title">香港</p>
       </div>
-    </div>
-    <div class="content__inner">
       <div class="content__item">
         <div class="cover-slide inview darken">
           <img src="~/assets/images/IMG_2496.png" class="img-zoom" />
