@@ -3,6 +3,14 @@
     <h1>Transition</h1>
     <button class="mb-lg" @click="show = !show">アニメーション</button>
     <transition
+      :css="false"
+      @before-enter="beforeEnter"
+      @enter="enter"
+      @leave="leave"
+    >
+      <div class="circle" v-if="show"></div>
+    </transition>
+    <transition
       name="fade"
       enter-active-class="animate__animated animate__bounce"
     >
@@ -21,10 +29,45 @@ export default {
       show: false,
     }
   },
+  methods: {
+    beforeEnter(el) {
+      el.style.transform = "scale(0)"
+    },
+    enter(el, done) {
+      let scale = 0
+      const interval = setInterval(() => {
+        el.style.transform = `scale(${scale})`
+        scale += 0.1
+        if (scale > 1) {
+          clearInterval(interval)
+          done()
+        }
+      }, 20)
+    },
+    leave(el, done) {
+      let scale = 1
+      const interval = setInterval(() => {
+        el.style.transform = `scale(${scale})`
+        scale -= 0.1
+        if (scale < 0) {
+          clearInterval(interval)
+          done()
+        }
+      }, 20)
+    },
+  },
 }
 </script>
 
 <style lang="scss" scoped>
+.circle {
+  width: 200px;
+  height: 200px;
+  margin: auto;
+  border-radius: 100px;
+  background-color: brown;
+}
+
 // フェード
 .fade-enter {
   opacity: 0;

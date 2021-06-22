@@ -15,6 +15,18 @@
         </div>
         <p class="item-title">ロンドン</p>
       </div>
+      <div class="content__item">
+        <div class="cover-slide inview darken">
+          <img src="~/assets/images/IMG_5912.png" class="img-zoom" />
+        </div>
+        <p class="item-title">屋久島</p>
+      </div>
+      <div class="content__item">
+        <div class="cover-slide inview darken">
+          <img src="~/assets/images/IMG_7662.png" class="img-zoom" />
+        </div>
+        <p class="item-title">大山</p>
+      </div>
     </div>
   </div>
 </template>
