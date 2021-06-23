@@ -33,6 +33,7 @@
   border: 1px solid black;
 }
 
+// FindTravel
 .content {
   &__inner {
     flex-direction: row;
@@ -40,6 +41,21 @@
   }
   &__item {
     flex-basis: 50%;
+  }
+}
+
+// TravelPlan
+.travel {
+  &__inner {
+    justify-content: space-around;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  &__item {
+    flex-basis: 30%;
+  }
+  &__img {
+    height: 370px;
   }
 }
 

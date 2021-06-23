@@ -1,3 +1,5 @@
+$bgBeige: beige;
+
 .flex {
   display: flex;
   justify-content: space-between;
@@ -12,14 +14,34 @@
   }
 }
 
+// FindTravel
 .content {
   @extend .content-width;
-  background-color: beige;
+  background-color: $bgBeige;
   padding: 10px;
 
   &__inner {
     display: flex;
     flex-direction: column;
+  }
+}
+
+// TravelPlan
+.travel {
+  background-color: $bgBeige;
+  &__inner {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__img {
+    height: 200px;
+    overflow: hidden;
+    & > img {
+      object-fit: cover;
+      height: 100%;
+      width: 100%;
+    }
   }
 }
 
