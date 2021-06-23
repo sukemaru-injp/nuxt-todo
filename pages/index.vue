@@ -14,7 +14,7 @@
       <FindTravel></FindTravel>
     </div>
     <div class="main-content">
-      <FadeSection></FadeSection>
+      <Number></Number>
     </div>
   </div>
 </template>
@@ -23,14 +23,14 @@
 import ButtonComponent from "~/components/Button.vue"
 import Swiper from "~/components/Swiper.vue"
 import FindTravel from "~/components/FindTravel.vue"
-import FadeSection from "~/components/FadeSection.vue"
+import Number from "~/components/Number.vue"
 
 export default {
   components: {
     ButtonComponent,
     Swiper,
     FindTravel,
-    FadeSection,
+    Number,
   },
 }
 </script>

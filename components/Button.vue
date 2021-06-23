@@ -3,18 +3,18 @@
     <h1>Transition</h1>
     <button class="mb-lg" @click="show = !show">アニメーション</button>
     <transition
+      name="fade"
+      enter-active-class="animate__animated animate__bounce"
+    >
+      <h2 v-if="show" appear>どこに行こうか？</h2>
+    </transition>
+    <transition
       :css="false"
       @before-enter="beforeEnter"
       @enter="enter"
       @leave="leave"
     >
       <div class="circle" v-if="show"></div>
-    </transition>
-    <transition
-      name="fade"
-      enter-active-class="animate__animated animate__bounce"
-    >
-      <h2 v-if="show">どこに行こうか？</h2>
     </transition>
     <transition name="slide" appear>
       <h3 v-if="show">見てみよう！</h3>
@@ -26,7 +26,7 @@
 export default {
   data() {
     return {
-      show: false,
+      show: true,
     }
   },
   methods: {
