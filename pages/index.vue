@@ -3,9 +3,7 @@
     <Swiper></Swiper>
     <hr />
     <div class="main-content">
-      <router-link to="/todos" class="btn float">旅程を作る</router-link>
       <router-link to="/todos" class="btn float">メモを作る</router-link>
-      <p class="want">やりたいことをやろう</p>
     </div>
     <div class="main-content">
       <ButtonComponent></ButtonComponent>
@@ -14,7 +12,7 @@
       <FindTravel></FindTravel>
     </div>
     <div class="main-content">
-      <FadeSection></FadeSection>
+      <TravelPlan></TravelPlan>
     </div>
   </div>
 </template>
@@ -23,30 +21,23 @@
 import ButtonComponent from "~/components/Button.vue"
 import Swiper from "~/components/Swiper.vue"
 import FindTravel from "~/components/FindTravel.vue"
-import FadeSection from "~/components/FadeSection.vue"
+import TravelPlan from "~/components/TravelPlan.vue"
 
 export default {
   components: {
     ButtonComponent,
     Swiper,
     FindTravel,
-    FadeSection,
+    TravelPlan,
   },
 }
 </script>
 
 <style lang="scss" scoped>
-.want {
-  color: red;
-
-  &:hover {
-    color: blue;
-  }
-}
-
 .main-content {
   text-align: center;
   padding: 10px;
+  margin-bottom: 30px;
 }
 
 .btn {
