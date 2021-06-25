@@ -45,6 +45,34 @@ $bgBeige: beige;
   }
 }
 
+// Description
+.description {
+  padding: 20px;
+  background-color: $bgBeige;
+  &__inner {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__title {
+    @extend .font-mlg;
+  }
+
+  &__sub {
+    @extend .mb-lg;
+  }
+
+  &__img {
+    height: 350px;
+
+    & > img {
+      object-fit: cover;
+      height: 100%;
+      width: 100%;
+    }
+  }
+}
+
 // ユーティリティクラス
 .font-sm {
   font-size: 15px;
@@ -56,6 +84,10 @@ $bgBeige: beige;
 
 .font-lg {
   font-size: 21px;
+}
+
+.font-mlg {
+  font-size: 30px;
 }
 
 .mb-sm {

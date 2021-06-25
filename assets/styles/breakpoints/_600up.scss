@@ -59,17 +59,44 @@
   }
 }
 
-// ユーティリティクラス
-.font-sm {
-  font-size: 15px;
+// Description
+.description {
+  &__inner {
+    justify-content: space-between;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  &__texts,
+  &__img {
+    flex-basis: 45%;
+  }
+
+  &__texts {
+    display: flex;
+    align-items: center;
+  }
+
+  &__img {
+    height: 400px;
+  }
 }
 
-.font-md {
+// ユーティリティクラス
+.font-sm {
   font-size: 18px;
 }
 
-.font-lg {
+.font-md {
   font-size: 21px;
+}
+
+.font-lg {
+  font-size: 24px;
+}
+
+.font-mlg {
+  font-size: 36px;
 }
 
 .mb-lg {

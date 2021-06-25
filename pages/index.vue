@@ -3,7 +3,7 @@
     <Swiper></Swiper>
     <hr />
     <div class="main-content">
-      <router-link to="/todos" class="btn float">メモを作る</router-link>
+      <Description></Description>
     </div>
     <div class="main-content">
       <ButtonComponent></ButtonComponent>
@@ -22,6 +22,7 @@ import ButtonComponent from "~/components/Button.vue"
 import Swiper from "~/components/Swiper.vue"
 import FindTravel from "~/components/FindTravel.vue"
 import TravelPlan from "~/components/TravelPlan.vue"
+import Description from "~/components/Description.vue"
 
 export default {
   components: {
@@ -29,6 +30,7 @@ export default {
     Swiper,
     FindTravel,
     TravelPlan,
+    Description,
   },
 }
 </script>

@@ -60,7 +60,7 @@ export default {
 }
 
 .swiper-slide {
-  height: 400px;
+  height: 350px;
   overflow: hidden;
 
   & > img {
