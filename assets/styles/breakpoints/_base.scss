@@ -52,6 +52,8 @@ $bgBeige: beige;
   &__inner {
     display: flex;
     flex-direction: column;
+    position: relative;
+    z-index: 0;
   }
 
   &__title {
@@ -63,12 +65,16 @@ $bgBeige: beige;
   }
 
   &__img {
+    @extend .mb-sm;
     height: 350px;
+    box-shadow: inset 0 0 30px black;
 
     & > img {
       object-fit: cover;
       height: 100%;
       width: 100%;
+      position: relative;
+      z-index: -1;
     }
   }
 }
