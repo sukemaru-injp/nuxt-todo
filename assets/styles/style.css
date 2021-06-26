@@ -140,6 +140,12 @@
     height: 100px;
     padding-top: 30px;
   }
+  .header-right__nav {
+    display: block !important;
+  }
+  .menu-icon {
+    display: none !important;
+  }
   .btn {
     width: 300px !important;
   }

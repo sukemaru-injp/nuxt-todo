@@ -4,6 +4,16 @@
       <router-link to="/" class="title">TRAVEL TODO</router-link>
     </div>
     <div class="header-right">
+      <nav class="header-right__nav">
+        <ul class="header-right__ul">
+          <li class="header-right__li">
+            <router-link to="/users/login">新規登録</router-link>
+          </li>
+          <li class="header-right__li">
+            <router-link to="/users/login">ログイン</router-link>
+          </li>
+        </ul>
+      </nav>
       <button class="menu-icon" @click="toggle">
         <span></span>
         <span></span>
@@ -26,11 +36,37 @@ export default {
 <style lang="scss" scoped>
 .header {
   background-color: aquamarine;
-  height: 60px;
-  padding-top: 10px;
+  height: 80px;
+  padding-top: 20px;
   display: flex;
   justify-content: space-between;
   position: relative;
+}
+
+.header-right {
+  &__nav {
+    display: none;
+  }
+  &__ul {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    list-style: none;
+    font-size: 18px;
+    margin-top: 10px;
+  }
+  &__li {
+    padding: 0;
+    margin-right: 30px;
+
+    & > a {
+      color: gray;
+
+      &:hover {
+        text-decoration: none;
+      }
+    }
+  }
 }
 
 .title {
