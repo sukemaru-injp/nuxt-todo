@@ -1,6 +1,6 @@
 <template>
   <div id="container">
-    <h2>ログイン</h2>
+    <h2>新規登録</h2>
     <div class="user-form">
       <div class="user-form__email">
         <label for="email">Email:</label>
@@ -12,7 +12,7 @@
       </div>
 
       <div class="user-form__btn">
-        <button @click="newUser">ログイン</button>
+        <button @click="newUser">登録する</button>
       </div>
     </div>
   </div>

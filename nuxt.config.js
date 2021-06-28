@@ -1,6 +1,4 @@
 const webpack = require("webpack")
-// import Sass from "sass"
-// import Fiber from "fibers"
 
 export default {
   // Disable server-side rendering: https://go.nuxtjs.dev/ssr-mode
