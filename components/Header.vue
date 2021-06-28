@@ -7,7 +7,7 @@
       <nav class="header-right__nav">
         <ul class="header-right__ul">
           <li class="header-right__li">
-            <router-link to="/users/login">新規登録</router-link>
+            <router-link to="/users/new">新規登録</router-link>
           </li>
           <li class="header-right__li">
             <router-link to="/users/login">ログイン</router-link>

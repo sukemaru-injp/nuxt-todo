@@ -5,7 +5,9 @@
     <nav class="mobile">
       <ul class="mobile__main">
         <li class="mobile__item">
-          <a href="#" class="mobile__link">新規登録</a>
+          <router-link to="/users/new" class="mobile__link">
+            新規登録
+          </router-link>
         </li>
         <li class="mobile__item">
           <router-link to="/users/login" class="mobile__link">
