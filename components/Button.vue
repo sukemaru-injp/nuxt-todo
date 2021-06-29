@@ -1,7 +1,14 @@
 <template>
   <div class="transition mb-lg">
     <h1>Transition</h1>
+    <el-button class="mb-lg" @click="visible = !visible">
+      旅行を相談する
+    </el-button>
     <button class="mb-lg" @click="show = !show">アニメーション</button>
+    <el-dialog :visible.sync="visible" title="確認">
+      <label for="country">行きたい国は？</label>
+      <input type="text" />
+    </el-dialog>
     <transition
       name="fade"
       enter-active-class="animate__animated animate__bounce"
@@ -27,6 +34,7 @@ export default {
   data() {
     return {
       show: true,
+      visible: false,
     }
   },
   methods: {
