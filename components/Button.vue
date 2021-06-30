@@ -8,6 +8,7 @@
     <el-dialog :visible.sync="visible" title="確認">
       <label for="country">行きたい国は？</label>
       <input type="text" />
+      <input type="submit" placeholder="送信" />
     </el-dialog>
     <transition
       name="fade"
